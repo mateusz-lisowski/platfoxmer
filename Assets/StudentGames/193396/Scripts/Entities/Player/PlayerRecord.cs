@@ -94,6 +94,9 @@ namespace _193396
 
 			string data = (string)eventData;
 
+			Debug.Log(transform.parent.parent.name + " (PlayerRecord) at " + Time.time
+				+ ": " + eventName + ", " + data);
+
 			if (tryParseEvent(ref moveUp, data)) return;
 			if (tryParseEvent(ref moveDown, data)) return;
 			if (tryParseEvent(ref moveLeft, data)) return;
