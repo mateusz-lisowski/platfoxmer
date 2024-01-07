@@ -49,9 +49,6 @@ namespace _193396
 
 				var e = events[currentEvent];
 
-				Debug.Log(transform.parent.name + " (RecordedEventsCaller) at " + Time.time 
-					+ ": " + e.eventName + ", " + e.eventData);
-				
 				controller.onEvent(e.eventName, e.eventData);
 				currentEvent++;
 				if (currentEvent < events.Count)

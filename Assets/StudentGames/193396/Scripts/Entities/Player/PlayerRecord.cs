@@ -120,10 +120,16 @@ namespace _193396
 
 			data.lastFrame = controller.currentUpdate;
 
+			Debug.Log("eventData: " + eventData);
+			Debug.Log("data.name: " + data.name);
+
 			string rest = eventData.Substring(data.name.Length);
+			Debug.Log("rest: " + rest);
+
 			if (rest != "")
 			{
 				rest = rest.Substring(1);
+				Debug.Log("rest after: " + rest);
 
 				data.holdEnd = Time.time + float.Parse(rest);
 			}
